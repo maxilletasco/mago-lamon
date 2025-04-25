@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FadeInOnce from "@/app/fadeInOnce";
 
 export default function Testimonials() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,8 @@ export default function Testimonials() {
   return (
     <div className="w-full mx-auto text-center py-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-10">
-        <figure className="text-center flex flex-col justify-between min-h-[200px]">
+        <FadeInOnce>
+        <figure className="animate-fade-up animate-once animate-duration-1000 animate-delay-200 text-center flex flex-col justify-between min-h-[200px]">
           <svg
             className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
             aria-hidden="true"
@@ -57,8 +59,9 @@ export default function Testimonials() {
             Abrir vídeo
           </button>
         </figure>
-
-        <figure className="text-center flex flex-col justify-between min-h-[200px]">
+        </FadeInOnce>
+        <FadeInOnce>
+        <figure className="animate-fade-up animate-once animate-duration-1000 animate-delay-200 text-center flex flex-col justify-between min-h-[200px]">
           <svg
             className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
             aria-hidden="true"
@@ -95,8 +98,9 @@ export default function Testimonials() {
             Abrir vídeo
           </button>
         </figure>
-
-        <figure className="text-center flex flex-col justify-between min-h-[200px]">
+        </FadeInOnce>
+        <FadeInOnce>
+        <figure className="animate-fade-up animate-once animate-duration-1000 animate-delay-200 text-center flex flex-col justify-between min-h-[200px]">
           <svg
             className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
             aria-hidden="true"
@@ -133,6 +137,7 @@ export default function Testimonials() {
             Abrir vídeo
           </button>
         </figure>
+        </FadeInOnce>
       </div>
 
       {/* Modal */}
